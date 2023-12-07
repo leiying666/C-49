@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main(){
+	int j=0,k=0;
+	int b[j][k];
+	printf("请输入数组元素:");
+	for(j=0;j<3;j++){
+		for(k=0;k<3;k++){
+			scanf("%d",&b[j][k]);
+		}
+	}
+	int max=b[0][0];
+	for(j=0;j<3;j++){
+		for(k=0;k<3;k++){
+			if(b[j][k]>max){
+				max=b[j][k];
+			}
+		}
+	}
+	printf("数组b[j][k]中最大的数是%d\n",max);
+	int h,l;
+	for(j=0;j<3;j++){
+		for(k=0;k<3;k++){
+			if(b[j][k]==max){
+				h=j;
+				l=k;
+				
+			} 
+		}
+	}
+	 printf("它在第%d行第%d列",h+1,l+1);
+	 
+	return 0;
+}
